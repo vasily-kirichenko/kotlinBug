@@ -1,0 +1,821 @@
+> Task :compileKotlin FAILED
+e: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: wrong bytecode generated
+  @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 0
+    INSTANCEOF MainKt$main$1
+    IFEQ L1
+    ALOAD 0
+    CHECKCAST MainKt$main$1
+    ASTORE 14
+    ALOAD 14
+    GETFIELD MainKt$main$1.label : I
+    LDC -2147483648
+    IAND
+    IFEQ L1
+    ALOAD 14
+    DUP
+    GETFIELD MainKt$main$1.label : I
+    LDC -2147483648
+    ISUB
+    PUTFIELD MainKt$main$1.label : I
+    GOTO L2
+   L1
+    NEW MainKt$main$1
+    DUP
+    ALOAD 0
+    INVOKESPECIAL MainKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    ASTORE 14
+   L2
+    ALOAD 14
+    GETFIELD MainKt$main$1.result : Ljava/lang/Object;
+    ASTORE 13
+   L3
+    INVOKESTATIC kotlin/coroutines/intrinsics/IntrinsicsKt.getCOROUTINE_SUSPENDED ()Ljava/lang/Object;
+   L4
+    LINENUMBER 5 L4
+    ASTORE 15
+    ALOAD 14
+    GETFIELD MainKt$main$1.label : I
+    TABLESWITCH
+      0: L5
+      1: L6
+      default: L7
+   L5
+    ALOAD 13
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+   L8
+   L9
+   L10
+    LINENUMBER 6 L10
+    ICONST_1
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    ICONST_2
+e: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: wrong bytecode generated
+
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    INVOKESTATIC kotlin/TuplesKt.to (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    INVOKESTATIC kotlin/collections/CollectionsKt.listOf (Ljava/lang/Object;)Ljava/util/List;
+    CHECKCAST java/lang/Iterable
+    ASTORE 1
+    NOP
+   L11
+    ICONST_0
+    ISTORE 2
+   L12
+   L13
+    LINENUMBER 12 L13
+    ALOAD 1
+    ASTORE 3
+    NEW java/util/ArrayList
+    DUP
+    ALOAD 1
+    BIPUSH 10
+    INVOKESTATIC kotlin/collections/CollectionsKt.collectionSizeOrDefault (Ljava/lang/Iterable;I)I
+    INVOKESPECIAL java/util/ArrayList.<init> (I)V
+    CHECKCAST java/util/Collection
+    ASTORE 4
+   L14
+    ICONST_0
+    ISTORE 5
+   L15
+    LINENUMBER 13 L15
+    ALOAD 3
+    INVOKEINTERFACE java/lang/Iterable.iterator ()Ljava/util/Iterator; (itf)
+    ASTORE 6
+   L16
+    ALOAD 6
+    INVOKEINTERFACE java/util/Iterator.hasNext ()Z (itf)
+    IFEQ L17
+    ALOAD 6
+    INVOKEINTERFACE java/util/Iterator.next ()Ljava/lang/Object; (itf)
+    ASTORE 7
+   L18
+    LINENUMBER 14 L18
+    ALOAD 4
+    ALOAD 7
+    CHECKCAST kotlin/Pair
+    ASTORE 8
+    ASTORE 11
+   L19
+    ICONST_0
+    ISTORE 9
+   L20
+    ALOAD 10
+    ALOAD 8
+    INVOKEVIRTUAL kotlin/Pair.component2 ()Ljava/lang/Object;
+    CHECKCAST java/lang/Number
+    INVOKEVIRTUAL java/lang/Number.intValue ()I
+    PUTFIELD kotlin/jvm/internal/Ref$IntRef.element : I
+   L21
+    LINENUMBER 7 L21
+    LCONST_1
+    NEW MainKt$main$2$1
+    DUP
+    ALOAD 10
+    ACONST_NULL
+    INVOKESPECIAL MainKt$main$2$1.<init> (Lkotlin/jvm/internal/Ref$IntRef;Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/jvm/functions/Function2
+    ALOAD 14
+    ALOAD 14
+    ALOAD 1
+    PUTFIELD MainKt$main$1.L$0 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 3
+    PUTFIELD MainKt$main$1.L$1 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 4
+    PUTFIELD MainKt$main$1.L$2 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 6
+    PUTFIELD MainKt$main$1.L$3 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 7
+    PUTFIELD MainKt$main$1.L$4 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 8
+    PUTFIELD MainKt$main$1.L$5 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 11
+    PUTFIELD MainKt$main$1.L$6 : Ljava/lang/Object;
+    ALOAD 14
+    ICONST_1
+    PUTFIELD MainKt$main$1.label : I
+    INVOKESTATIC kotlinx/coroutines/TimeoutKt.withTimeout (JLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+   L22
+    DUP
+    ALOAD 15
+    IF_ACMPNE L23
+   L24
+    LINENUMBER 5 L24
+    ALOAD 15
+    ARETURN
+   L25
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$6 : Ljava/lang/Object;
+    CHECKCAST java/util/Collection
+    ASTORE 11
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$5 : Ljava/lang/Object;
+    CHECKCAST kotlin/Pair
+    ASTORE 8
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$4 : Ljava/lang/Object;
+    ASTORE 7
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$3 : Ljava/lang/Object;
+    CHECKCAST java/util/Iterator
+    ASTORE 6
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$2 : Ljava/lang/Object;
+    CHECKCAST java/util/Collection
+    ASTORE 4
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$1 : Ljava/lang/Object;
+    CHECKCAST java/lang/Iterable
+    ASTORE 3
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$0 : Ljava/lang/Object;
+    CHECKCAST java/lang/Iterable
+    ASTORE 1
+   L26
+    NOP
+    ALOAD 13
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 13
+   L23
+    LINENUMBER 7 L23
+    CHECKCAST java/lang/Number
+    INVOKEVIRTUAL java/lang/Number.intValue ()I
+   L27
+    LINENUMBER 9 L27
+    NOP
+    GOTO L28
+   L29
+   L30
+   L28
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    ASTORE 12
+    ALOAD 11
+    ALOAD 12
+    INVOKEINTERFACE java/util/Collection.add (Ljava/lang/Object;)Z (itf)
+    POP
+   L31
+    LINENUMBER 13 L31
+    GOTO L16
+   L17
+    LINENUMBER 15 L17
+    ALOAD 4
+   L32
+    CHECKCAST java/util/List
+    NOP
+    GOTO L33
+   L34
+   L35
+   L33
+    POP
+   L36
+    LINENUMBER 11 L36
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    ARETURN
+   L37
+   L38
+   L7
+    NEW java/lang/IllegalStateException
+    DUP
+    LDC "call to 'resume' before 'invoke' with coroutine"
+    INVOKESPECIAL java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+    ATHROW
+    RETURN
+   L39
+    LOCALVARIABLE x I L21 L30 10
+    LOCALVARIABLE $dstr$_u24__u24$x Lkotlin/Pair; L19 L30 8
+    LOCALVARIABLE $i$a$-map-MainKt$main$2 I L20 L30 9
+    LOCALVARIABLE item$iv$iv Ljava/lang/Object; L18 L31 7
+    LOCALVARIABLE $this$mapTo$iv$iv Ljava/lang/Iterable; L14 L32 3
+    LOCALVARIABLE destination$iv$iv Ljava/util/Collection; L14 L32 4
+    LOCALVARIABLE $i$f$mapTo I L15 L32 5
+    LOCALVARIABLE $this$map$iv Ljava/lang/Iterable; L11 L35 1
+    LOCALVARIABLE $i$f$map I L12 L35 2
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L39 0
+    LOCALVARIABLE $continuation Lkotlin/coroutines/Continuation; L2 L38 14
+    LOCALVARIABLE $result Ljava/lang/Object; L3 L38 13
+    MAXSTACK = 7
+    MAXLOCALS = 16
+
+File being compiled: (5,1) in /Users/vaskir/git/kotlinBug/src/main/kotlin/Main.kt
+The root cause org.jetbrains.kotlin.codegen.CompilationException was thrown at: org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:92)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:936)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethodBody(FunctionCodegen.java:493)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:261)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:177)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.gen(FunctionCodegen.java:148)
+	at org.jetbrains.kotlin.codegen.MemberCodegen.genSimpleMember(MemberCodegen.java:197)
+	at org.jetbrains.kotlin.codegen.PackagePartCodegen.generateBody(PackagePartCodegen.java:95)
+	at org.jetbrains.kotlin.codegen.MemberCodegen.generate(MemberCodegen.java:129)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generateFile(PackageCodegenImpl.java:145)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:70)
+	at org.jetbrains.kotlin.codegen.DefaultCodegenFactory.generatePackage(CodegenFactory.kt:88)
+	at org.jetbrains.kotlin.codegen.DefaultCodegenFactory.generateModule(CodegenFactory.kt:67)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.compileCorrectFiles(KotlinCodegenFacade.java:35)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinToJVMBytecodeCompiler.generate(KotlinToJVMBytecodeCompiler.kt:634)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinToJVMBytecodeCompiler.compileModules$cli(KotlinToJVMBytecodeCompiler.kt:194)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:163)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:51)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:85)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:105)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:349)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:105)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileIncrementally(IncrementalCompilerRunner.kt:237)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.access$compileIncrementally(IncrementalCompilerRunner.kt:37)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner$compile$2.invoke(IncrementalCompilerRunner.kt:79)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:91)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:606)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:99)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1645)
+	at jdk.internal.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:
+main (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;:
+  @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:
+
+    ALOAD 0
+    INSTANCEOF MainKt$main$1
+    IFEQ L1
+    ALOAD 0
+    CHECKCAST MainKt$main$1
+    ASTORE 14
+    ALOAD 14
+    GETFIELD MainKt$main$1.label : I
+    LDC -2147483648
+    IAND
+    IFEQ L1
+    ALOAD 14
+    DUP
+    GETFIELD MainKt$main$1.label : I
+    LDC -2147483648
+    ISUB
+    PUTFIELD MainKt$main$1.label : I
+    GOTO L2
+   L1
+    NEW MainKt$main$1
+    DUP
+    ALOAD 0
+    INVOKESPECIAL MainKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    ASTORE 14
+   L2
+    ALOAD 14
+    GETFIELD MainKt$main$1.result : Ljava/lang/Object;
+    ASTORE 13
+   L3
+    INVOKESTATIC kotlin/coroutines/intrinsics/IntrinsicsKt.getCOROUTINE_SUSPENDED ()Ljava/lang/Object;
+   L4
+    LINENUMBER 5 L4
+    ASTORE 15
+    ALOAD 14
+    GETFIELD MainKt$main$1.label : I
+    TABLESWITCH
+      0: L5
+      1: L6
+      default: L7
+   L5
+    ALOAD 13
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+   L8
+   L9
+   L10
+    LINENUMBER 6 L10
+    ICONST_1
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    ICONST_2
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    INVOKESTATIC kotlin/TuplesKt.to (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    INVOKESTATIC kotlin/collections/CollectionsKt.listOf (Ljava/lang/Object;)Ljava/util/List;
+    CHECKCAST java/lang/Iterable
+    ASTORE 1
+    NOP
+   L11
+    ICONST_0
+    ISTORE 2
+   L12
+   L13
+    LINENUMBER 12 L13
+    ALOAD 1
+    ASTORE 3
+    NEW java/util/ArrayList
+    DUP
+    ALOAD 1
+    BIPUSH 10
+    INVOKESTATIC kotlin/collections/CollectionsKt.collectionSizeOrDefault (Ljava/lang/Iterable;I)I
+    INVOKESPECIAL java/util/ArrayList.<init> (I)V
+    CHECKCAST java/util/Collection
+    ASTORE 4
+   L14
+    ICONST_0
+    ISTORE 5
+   L15
+    LINENUMBER 13 L15
+    ALOAD 3
+    INVOKEINTERFACE java/lang/Iterable.iterator ()Ljava/util/Iterator; (itf)
+    ASTORE 6
+   L16
+    ALOAD 6
+    INVOKEINTERFACE java/util/Iterator.hasNext ()Z (itf)
+    IFEQ L17
+    ALOAD 6
+    INVOKEINTERFACE java/util/Iterator.next ()Ljava/lang/Object; (itf)
+    ASTORE 7
+   L18
+    LINENUMBER 14 L18
+    ALOAD 4
+    ALOAD 7
+    CHECKCAST kotlin/Pair
+    ASTORE 8
+    ASTORE 11
+   L19
+    ICONST_0
+    ISTORE 9
+   L20
+    ALOAD 10
+    ALOAD 8
+    INVOKEVIRTUAL kotlin/Pair.component2 ()Ljava/lang/Object;
+    CHECKCAST java/lang/Number
+    INVOKEVIRTUAL java/lang/Number.intValue ()I
+    PUTFIELD kotlin/jvm/internal/Ref$IntRef.element : I
+   L21
+    LINENUMBER 7 L21
+    LCONST_1
+    NEW MainKt$main$2$1
+    DUP
+    ALOAD 10
+    ACONST_NULL
+    INVOKESPECIAL MainKt$main$2$1.<init> (Lkotlin/jvm/internal/Ref$IntRef;Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/jvm/functions/Function2
+    ALOAD 14
+    ALOAD 14
+    ALOAD 1
+    PUTFIELD MainKt$main$1.L$0 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 3
+    PUTFIELD MainKt$main$1.L$1 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 4
+    PUTFIELD MainKt$main$1.L$2 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 6
+    PUTFIELD MainKt$main$1.L$3 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 7
+    PUTFIELD MainKt$main$1.L$4 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 8
+    PUTFIELD MainKt$main$1.L$5 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 11
+    PUTFIELD MainKt$main$1.L$6 : Ljava/lang/Object;
+    ALOAD 14
+    ICONST_1
+    PUTFIELD MainKt$main$1.label : I
+    INVOKESTATIC kotlinx/coroutines/TimeoutKt.withTimeout (JLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+   L22
+    DUP
+    ALOAD 15
+    IF_ACMPNE L23
+   L24
+    LINENUMBER 5 L24
+    ALOAD 15
+    ARETURN
+   L25
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$6 : Ljava/lang/Object;
+    CHECKCAST java/util/Collection
+    ASTORE 11
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$5 : Ljava/lang/Object;
+    CHECKCAST kotlin/Pair
+    ASTORE 8
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$4 : Ljava/lang/Object;
+    ASTORE 7
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$3 : Ljava/lang/Object;
+    CHECKCAST java/util/Iterator
+    ASTORE 6
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$2 : Ljava/lang/Object;
+    CHECKCAST java/util/Collection
+    ASTORE 4
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$1 : Ljava/lang/Object;
+    CHECKCAST java/lang/Iterable
+    ASTORE 3
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$0 : Ljava/lang/Object;
+    CHECKCAST java/lang/Iterable
+    ASTORE 1
+   L26
+    NOP
+    ALOAD 13
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 13
+   L23
+    LINENUMBER 7 L23
+    CHECKCAST java/lang/Number
+    INVOKEVIRTUAL java/lang/Number.intValue ()I
+   L27
+    LINENUMBER 9 L27
+    NOP
+    GOTO L28
+   L29
+   L30
+   L28
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    ASTORE 12
+    ALOAD 11
+    ALOAD 12
+    INVOKEINTERFACE java/util/Collection.add (Ljava/lang/Object;)Z (itf)
+    POP
+   L31
+    LINENUMBER 13 L31
+    GOTO L16
+   L17
+    LINENUMBER 15 L17
+    ALOAD 4
+   L32
+    CHECKCAST java/util/List
+    NOP
+    GOTO L33
+   L34
+   L35
+   L33
+    POP
+   L36
+    LINENUMBER 11 L36
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    ARETURN
+   L37
+   L38
+   L7
+    NEW java/lang/IllegalStateException
+    DUP
+    LDC "call to 'resume' before 'invoke' with coroutine"
+    INVOKESPECIAL java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+    ATHROW
+    RETURN
+   L39
+    LOCALVARIABLE x I L21 L30 10
+    LOCALVARIABLE $dstr$_u24__u24$x Lkotlin/Pair; L19 L30 8
+    LOCALVARIABLE $i$a$-map-MainKt$main$2 I L20 L30 9
+    LOCALVARIABLE item$iv$iv Ljava/lang/Object; L18 L31 7
+    LOCALVARIABLE $this$mapTo$iv$iv Ljava/lang/Iterable; L14 L32 3
+    LOCALVARIABLE destination$iv$iv Ljava/util/Collection; L14 L32 4
+    LOCALVARIABLE $i$f$mapTo I L15 L32 5
+    LOCALVARIABLE $this$map$iv Ljava/lang/Iterable; L11 L35 1
+    LOCALVARIABLE $i$f$map I L12 L35 2
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L39 0
+    LOCALVARIABLE $continuation Lkotlin/coroutines/Continuation; L2 L38 14
+    LOCALVARIABLE $result Ljava/lang/Object; L3 L38 13
+    MAXSTACK = 7
+    MAXLOCALS = 16
+
+File is unknown
+The root cause org.jetbrains.kotlin.codegen.CompilationException was thrown at: org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:92)
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:92)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:929)
+	... 44 more
+Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:
+main (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;:
+  @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 0
+    INSTANCEOF MainKt$main$1
+    IFEQ L1
+    ALOAD 0
+    CHECKCAST MainKt$main$1
+    ASTORE 14
+    ALOAD 14
+    GETFIELD MainKt$main$1.label : I
+    LDC -2147483648
+    IAND
+    IFEQ L1
+    ALOAD 14
+    DUP
+    GETFIELD MainKt$main$1.label : I
+    LDC -2147483648
+    ISUB
+    PUTFIELD MainKt$main$1.label : I
+    GOTO L2
+   L1
+    NEW MainKt$main$1
+    DUP
+    ALOAD 0
+    INVOKESPECIAL MainKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    ASTORE 14
+   L2
+    ALOAD 14
+    GETFIELD MainKt$main$1.result : Ljava/lang/Object;
+    ASTORE 13
+   L3
+    INVOKESTATIC kotlin/coroutines/intrinsics/IntrinsicsKt.getCOROUTINE_SUSPENDED ()Ljava/lang/Object;
+   L4
+    LINENUMBER 5 L4
+    ASTORE 15
+    ALOAD 14
+    GETFIELD MainKt$main$1.label : I
+    TABLESWITCH
+      0: L5
+      1: L6
+      default: L7
+   L5
+    ALOAD 13
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+   L8
+    LINENUMBER 6 L8
+    ICONST_1
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    ICONST_2
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    INVOKESTATIC kotlin/TuplesKt.to (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    INVOKESTATIC kotlin/collections/CollectionsKt.listOf (Ljava/lang/Object;)Ljava/util/List;
+    CHECKCAST java/lang/Iterable
+    ASTORE 1
+    NOP
+   L9
+    ICONST_0
+    ISTORE 2
+   L10
+    LINENUMBER 12 L10
+    ALOAD 1
+    ASTORE 3
+    NEW java/util/ArrayList
+    DUP
+    ALOAD 1
+    BIPUSH 10
+    INVOKESTATIC kotlin/collections/CollectionsKt.collectionSizeOrDefault (Ljava/lang/Iterable;I)I
+    INVOKESPECIAL java/util/ArrayList.<init> (I)V
+    CHECKCAST java/util/Collection
+    ASTORE 4
+   L11
+    ICONST_0
+    ISTORE 5
+   L12
+    LINENUMBER 13 L12
+    ALOAD 3
+    INVOKEINTERFACE java/lang/Iterable.iterator ()Ljava/util/Iterator; (itf)
+    ASTORE 6
+   L13
+    ALOAD 6
+    INVOKEINTERFACE java/util/Iterator.hasNext ()Z (itf)
+    IFEQ L14
+    ALOAD 6
+    INVOKEINTERFACE java/util/Iterator.next ()Ljava/lang/Object; (itf)
+    ASTORE 7
+   L15
+    LINENUMBER 14 L15
+    ALOAD 4
+    ALOAD 7
+    CHECKCAST kotlin/Pair
+    ASTORE 8
+    ASTORE 11
+   L16
+    ICONST_0
+    ISTORE 9
+   L17
+    ALOAD 10
+    ALOAD 8
+    INVOKEVIRTUAL kotlin/Pair.component2 ()Ljava/lang/Object;
+    CHECKCAST java/lang/Number
+    INVOKEVIRTUAL java/lang/Number.intValue ()I
+    PUTFIELD kotlin/jvm/internal/Ref$IntRef.element : I
+   L18
+    LINENUMBER 7 L18
+    LCONST_1
+    NEW MainKt$main$2$1
+    DUP
+    ALOAD 10
+    ACONST_NULL
+    INVOKESPECIAL MainKt$main$2$1.<init> (Lkotlin/jvm/internal/Ref$IntRef;Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/jvm/functions/Function2
+    ALOAD 14
+    ALOAD 14
+    ALOAD 1
+    PUTFIELD MainKt$main$1.L$0 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 3
+    PUTFIELD MainKt$main$1.L$1 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 4
+    PUTFIELD MainKt$main$1.L$2 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 6
+    PUTFIELD MainKt$main$1.L$3 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 7
+    PUTFIELD MainKt$main$1.L$4 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 8
+    PUTFIELD MainKt$main$1.L$5 : Ljava/lang/Object;
+    ALOAD 14
+    ALOAD 11
+    PUTFIELD MainKt$main$1.L$6 : Ljava/lang/Object;
+    ALOAD 14
+    ICONST_1
+    PUTFIELD MainKt$main$1.label : I
+    INVOKESTATIC kotlinx/coroutines/TimeoutKt.withTimeout (JLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+   L19
+    DUP
+    ALOAD 15
+    IF_ACMPNE L20
+   L21
+    LINENUMBER 5 L21
+    ALOAD 15
+    ARETURN
+   L6
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$6 : Ljava/lang/Object;
+    CHECKCAST java/util/Collection
+    ASTORE 11
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$5 : Ljava/lang/Object;
+    CHECKCAST kotlin/Pair
+    ASTORE 8
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$4 : Ljava/lang/Object;
+    ASTORE 7
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$3 : Ljava/lang/Object;
+    CHECKCAST java/util/Iterator
+    ASTORE 6
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$2 : Ljava/lang/Object;
+    CHECKCAST java/util/Collection
+    ASTORE 4
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$1 : Ljava/lang/Object;
+    CHECKCAST java/lang/Iterable
+    ASTORE 3
+    ALOAD 14
+    GETFIELD MainKt$main$1.L$0 : Ljava/lang/Object;
+    CHECKCAST java/lang/Iterable
+    ASTORE 1
+   L22
+    NOP
+    ALOAD 13
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 13
+   L20
+    LINENUMBER 7 L20
+    CHECKCAST java/lang/Number
+    INVOKEVIRTUAL java/lang/Number.intValue ()I
+   L23
+    LINENUMBER 9 L23
+    NOP
+    GOTO L24
+   L24
+    INVOKESTATIC kotlin/coroutines/jvm/internal/Boxing.boxInt (I)Ljava/lang/Integer;
+    ASTORE 12
+    ALOAD 11
+    ALOAD 12
+    INVOKEINTERFACE java/util/Collection.add (Ljava/lang/Object;)Z (itf)
+    POP
+   L25
+    LINENUMBER 13 L25
+    GOTO L13
+   L14
+    LINENUMBER 15 L14
+    ALOAD 4
+   L26
+    CHECKCAST java/util/List
+    NOP
+    GOTO L27
+   L27
+    POP
+   L28
+    LINENUMBER 11 L28
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    ARETURN
+   L7
+    NEW java/lang/IllegalStateException
+    DUP
+    LDC "call to 'resume' before 'invoke' with coroutine"
+    INVOKESPECIAL java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+    ATHROW
+    RETURN
+   L29
+    LOCALVARIABLE x I L18 L24 10
+    LOCALVARIABLE $dstr$_u24__u24$x Lkotlin/Pair; L16 L24 8
+    LOCALVARIABLE $i$a$-map-MainKt$main$2 I L17 L24 9
+    LOCALVARIABLE item$iv$iv Ljava/lang/Object; L15 L25 7
+    LOCALVARIABLE $this$mapTo$iv$iv Ljava/lang/Iterable; L11 L26 3
+    LOCALVARIABLE destination$iv$iv Ljava/util/Collection; L11 L26 4
+    LOCALVARIABLE $i$f$mapTo I L12 L26 5
+    LOCALVARIABLE $this$map$iv Ljava/lang/Iterable; L9 L27 1
+    LOCALVARIABLE $i$f$map I L10 L27 2
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L29 0
+    LOCALVARIABLE $continuation Lkotlin/coroutines/Continuation; L2 L7 14
+    LOCALVARIABLE $result Ljava/lang/Object; L3 L7 13
+    MAXSTACK = 7
+    MAXLOCALS = 16
+
+File is unknown
+The root cause java.lang.AssertionError was thrown at: org.jetbrains.kotlin.codegen.optimization.MethodVerifier.transform(MethodVerifier.kt:28)
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:92)
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:90)
+	... 45 more
+Caused by: java.lang.AssertionError: AFTER mandatory stack transformations: incorrect bytecode
+	at org.jetbrains.kotlin.codegen.optimization.MethodVerifier.transform(MethodVerifier.kt:28)
+	at org.jetbrains.kotlin.codegen.optimization.transformer.CompositeMethodTransformer.transform(CompositeMethodTransformer.kt:25)
+	at org.jetbrains.kotlin.codegen.optimization.OptimizationMethodVisitor.performTransformations(OptimizationMethodVisitor.kt:62)
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.kt:70)
+	... 46 more
+Caused by: java.lang.RuntimeException: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 92: Expected an object reference, but found .
+	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.runAnalyzer(MethodTransformer.java:34)
+	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.analyze(MethodTransformer.java:44)
+	at org.jetbrains.kotlin.codegen.optimization.MethodVerifier.transform(MethodVerifier.kt:26)
+	... 49 more
+Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 92: Expected an object reference, but found .
+	at org.jetbrains.org.objectweb.asm.tree.analysis.Analyzer.analyze(Analyzer.java:291)
+	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.runAnalyzer(MethodTransformer.java:31)
+	... 51 more
+Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Expected an object reference, but found .
+	at org.jetbrains.org.objectweb.asm.tree.analysis.BasicVerifier.copyOperation(BasicVerifier.java:90)
+	at org.jetbrains.org.objectweb.asm.tree.analysis.BasicVerifier.copyOperation(BasicVerifier.java:43)
+	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.execute(Frame.java:288)
+	at org.jetbrains.org.objectweb.asm.tree.analysis.Analyzer.analyze(Analyzer.java:187)
+	... 52 more
+
+
+Caused by: java.lang.AssertionError: AFTER mandatory stack transformations: incorrect bytecode
+
+Caused by: java.lang.RuntimeException: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 92: Expected an object reference, but found .
+
+Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 92: Expected an object reference, but found .
+
+Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Expected an object reference, but found .
+
